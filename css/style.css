@@ -164,21 +164,26 @@ h1{
 /* Utilidades */
 
 .btn{
-    font-size: 2rem;
     background-color: #8ab800;
     color: white;
     text-transform: uppercase;
-    font-weight: 900;
+    font-weight: bold;
     padding: 1rem;
-    font-size: 1rem;
     transition: background-color .3s ease-out;
     width: 100%;
+    text-align: center;
+    display: block;
+    border: none;
 }
 
 .btn:hover {
     background-color: #769c02;
+    cursor: pointer;
 }
 
+.max-with-30 {
+    max-width: 30rem;
+}
 
 .centrar {
     text-align: center;
@@ -272,4 +277,109 @@ h3 + p {
 footer p {
     text-align: center;
     margin-top: 5rem;
+}
+
+/* Nosotros */
+
+.contenido-nosotros {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-columns: repeat(auto-fit, minmax( 40rem, 1fr ));
+    gap: 5rem;
+}
+
+.informacion-nosotros {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Blog */
+.contenedor-blog {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    column-gap: 4rem;
+}
+
+.entrada {
+    border-bottom: 2px solid var(--gris-claro);
+    padding-bottom: 4rem;
+    margin-bottom: 2rem;
+}
+
+.entrada:last-of-type {
+    border: none;
+}
+
+.entrada-meta {
+    display: flex;
+    justify-content: space-between;
+}
+
+.entrada-meta p {
+    font-weight: bolder;
+}
+
+.entrada-meta span {
+    font-weight: 500;
+    color: darkblue;
+}
+
+/* Entrada blog */
+.contenido-entrada-blog {
+    width: 60rem;
+    margin: 0 auto;
+}
+
+/* Galeria */
+.galeria {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.galeria img {
+    height: 30rem;
+    object-fit: cover;
+}
+
+/* Formulario */
+.formulario {
+    max-width: 60rem;
+    margin: 0 auto;
+}
+
+.formulario fieldset {
+    border: 1px solid var(--gris-claro);
+    margin-bottom: 2rem;
+}
+
+.formulario legend {
+    background-color: var(--azul);
+    padding: 1rem;
+    width: 100%;
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 4rem;
+}
+
+.campo {
+    display: flex;
+    margin-bottom: 2rem;
+}
+
+.campo label {
+    flex-basis: 10rem;
+}
+
+.campo input:not([type="radio"]),
+textarea, select {
+    flex: 1;
+    border: 1px solid var(--gris-claro);
+    padding: 1rem;
 }
